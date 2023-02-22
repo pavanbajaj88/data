@@ -1,0 +1,13 @@
+Reactive programming model: Spring WebFlux uses a reactive programming model, which means that it is designed to handle large numbers of concurrent requests without blocking threads. As such, it's important to make sure that all downstream services that you're calling with WebClient are also reactive, or at least non-blocking.
+
+API changes: RestTemplate and WebClient have different APIs, so you'll need to update your code to use the WebClient API. For example, you'll need to replace getForObject() and postForObject() with retrieve() and exchange().
+
+Request and response handling: WebClient returns reactive Mono and Flux objects, which represent asynchronous streams of data. You'll need to handle these objects correctly in your code, using operators like map(), flatMap(), and doOnNext() to transform and process the data.
+
+Error handling: When using WebClient, errors are handled differently than with RestTemplate. Instead of throwing exceptions, errors are returned as Mono or Flux objects that emit error signals. You'll need to handle these errors correctly in your code, using operators like onErrorResume() and onErrorReturn().
+
+Configuration: WebClient can be configured with a number of options, such as connection timeout, read timeout, and connection pooling. Make sure to configure your WebClient instance correctly for your use case.
+
+Test cases: When converting your RestTemplate code to WebClient, you'll need to update your test cases to reflect the new API and programming model. Make sure to test your code thoroughly to ensure that it works as expected.
+
+Performance considerations: While WebFlux is designed to handle large numbers of concurrent requests, it's important to keep in mind that performance can be impacted by factors such as network latency and server load. Be sure to monitor and optimize your code for performance as needed.
