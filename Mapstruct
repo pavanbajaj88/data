@@ -13,3 +13,21 @@ Customizable: MapStruct provides the ability to customize the generated mapping 
 Performance: MapStruct generates highly optimized code that is fast and efficient. This makes it suitable for use in high-performance applications.
 
 Overall, MapStruct is a powerful tool that can save developers time and effort, reduce errors, and improve the maintainability of Java code.
+
+
+
+MapStruct is a code generator that automatically generates mapper classes between Java bean-style source and target classes. It uses the annotations provided by the developer to generate efficient and type-safe code that reduces the manual effort required to map between source and target objects.
+
+Some of the benefits of using MapStruct include:
+
+Improved maintainability: By using code generation, the mapping code is generated automatically, reducing the chances of bugs and improving maintainability.
+
+Increased performance: The generated code is optimized for performance, resulting in faster mapping operations compared to manual mapping code.
+
+Type-safe mapping: MapStruct generates type-safe code, reducing the chances of runtime errors and making the code easier to understand.
+
+Annotation-based configuration: MapStruct's configuration is based on annotations, making it easy to understand and use.
+
+Alternatives to MapStruct include:
+
+ModelMapper: A code generation library for Java that generates mapping code based on source and target classes.
