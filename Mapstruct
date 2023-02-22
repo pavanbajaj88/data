@@ -31,3 +31,20 @@ Annotation-based configuration: MapStruct's configuration is based on annotation
 Alternatives to MapStruct include:
 
 ModelMapper: A code generation library for Java that generates mapping code based on source and target classes.
+
+
+
+
+
+
+Exposing entity classes to a controller in a web application can cause several problems, including:
+
+Security risks: Exposing entity classes can potentially expose sensitive data and operations to the outside world. In many cases, not all fields or properties of an entity need to be exposed to a user interface, and exposing them can result in security vulnerabilities.
+
+Tight coupling: Exposing entity classes can lead to tight coupling between the domain model and the user interface. This can make it difficult to change the domain model without impacting the user interface and vice versa.
+
+Lack of abstraction: Exposing entity classes can lead to the lack of abstraction and separation of concerns. The controller should be concerned with handling HTTP requests and responses, not with the details of the domain model.
+
+Performance: Exposing entity classes can result in the serialization of unnecessary data, which can impact the performance of the application.
+
+Instead of exposing entity classes, it's recommended to use data transfer objects (DTOs) that are specifically designed to be used by the controller. A DTO is a simple object that contains only the data required by the client, and can be used to transfer data between different layers of an application. Using DTOs can improve security, maintain abstraction and separation of concerns, and improve the performance of the application by reducing the amount of data being transferred.
